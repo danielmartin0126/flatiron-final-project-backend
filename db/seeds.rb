@@ -1,3 +1,4 @@
+require 'pry'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -29,10 +30,19 @@ Friend.create(user_id: 5, friend_id: 1)
 Friend.create(user_id: 6, friend_id: 1)
 Friend.create(user_id: 6, friend_id: 3)
 
-tophundo.map { |game| Game.create(app_id: game, name: "why")}
+tophundo.map { |game|
+    game_data = RestClient.get("https://store.steampowered.com/api/appdetails?appids=#{game}")
+    stuff = JSON.parse(game_data)
+    Game.create(app_id: game, name: stuff[game]["data"]["name"], desc:stuff[game]["data"]["short_description"])}
 
 FollowedGame.create(user_id: 1, game_id: 4, app_id:10)
-FollowedGame.create(user_id: 1, game_id: 2, app_id:10)
+FollowedGame.create(user_id: 2, game_id: 2, app_id:10)
+FollowedGame.create(user_id: 3, game_id: 2, app_id:10)
+FollowedGame.create(user_id: 4, game_id: 2, app_id:10)
+FollowedGame.create(user_id: 5, game_id: 2, app_id:10)
+FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+FollowedGame.create(user_id: 7, game_id: 2, app_id:10)
+FollowedGame.create(user_id: 8, game_id: 2, app_id:10)
 FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
 FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
 FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
