@@ -6,7 +6,7 @@ require 'pry'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-tophundo = ["10", "20", "30", "40", "50", "60", "70", "80", "130", "220", "240", "300", "320", "340", "360", "380", "400", "420", "440", "500", "550", "570", "620", "630", "730", "1250", "4000", "7670", "8870", "8930", "10180", "12210", "15700", "20920", "44350", "49520", "55230", "72850", "96000", "105600", "109600", "113400", "203160", "204360", "208090", "218230", "218620", "219640", "219740", "219990", "221380", "224260", "227300", "227940", "230410", "236390", "238320", "238960", "252490", "252950", "253710", "255710", "271590", "272060", "273110", "273350", "275390", "278360", "280790", "285800", "291480", "291550", "292030", "301520", "304050", "304930", "319630", "322330", "323370", "333930", "339610", "346110", "346900", "359550", "363970", "370910", "377160", "386360", "407530", "417910", "431960", "433850", "439700", "444090", "550650", "555570", "578080", "582010", "588430", "755790"]
+tophundo = ["380", "400", "420", "440", "500", "550", "570", "620", "630", "730", "1250", "4000", "7670", "8870", "8930", "10180", "12210", "15700", "20920", "44350", "49520", "55230", "72850", "96000", "105600", "109600", "113400", "203160", "204360", "208090", "218230", "218620", "219640", "219740", "219990", "221380", "224260", "227300", "227940", "230410", "236390", "238320", "238960", "252490", "252950", "253710", "255710", "271590", "272060", "273110", "273350", "275390", "278360", "280790", "285800", "291480", "291550", "292030", "301520", "304050", "304930", "319630", "322330", "323370", "333930", "339610", "346110", "346900", "359550", "363970", "370910", "377160", "386360", "407530", "417910", "431960", "433850", "444090", "550650", "555570", "578080", "582010", "588430", "755790"]
 
 User.create(name:"danny", steamid: 151, password:"okay")
 User.create(name:"goblin", steamid: 152, password:"okay")
@@ -35,17 +35,48 @@ tophundo.map { |game|
     stuff = JSON.parse(game_data)
     Game.create(app_id: game, name: stuff[game]["data"]["name"], desc:stuff[game]["data"]["short_description"])}
 
-FollowedGame.create(user_id: 1, game_id: 4, app_id:10)
-FollowedGame.create(user_id: 2, game_id: 2, app_id:10)
-FollowedGame.create(user_id: 3, game_id: 2, app_id:10)
-FollowedGame.create(user_id: 4, game_id: 2, app_id:10)
-FollowedGame.create(user_id: 5, game_id: 2, app_id:10)
-FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-FollowedGame.create(user_id: 7, game_id: 2, app_id:10)
-FollowedGame.create(user_id: 8, game_id: 2, app_id:10)
-FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
-FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 4, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
+
+    FollowedGame.create(user_id: 7, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 8, game_id: 2, app_id:10)
+
+    FollowedGame.create(user_id: 5, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 2, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 3, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 4, game_id: 2, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
+
+    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
+    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
+    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
+    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
+    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
+    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
+    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
+
+
+    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
 
 OwnedGame.create(user_id:1, game_id: 50)
 
