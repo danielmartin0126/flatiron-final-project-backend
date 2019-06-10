@@ -32,6 +32,7 @@ gem 'pry'
 gem 'active_model_serializers'
 gem 'rest-client'
 gem 'steam-condenser', '~> 1.3.11'
+gem 'jwt'
 gem 'uhhh'
 
 group :development, :test do

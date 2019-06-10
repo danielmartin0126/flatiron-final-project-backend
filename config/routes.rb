@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       resources :posts
       resources :comments
       get '/total_followers/:id', to: 'followed_games#total_followers'
+      post '/auth', to: 'auth#create'
+      get '/current_user', to: 'auth#show'
 
 
     end

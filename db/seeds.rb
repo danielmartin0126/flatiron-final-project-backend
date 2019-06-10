@@ -80,7 +80,8 @@ tophundo.map { |game|
 
 OwnedGame.create(user_id:1, game_id: 50)
 
-Post.create(poster_id:1, game_id:49, content: "wow this game is bad")
+Post.create(poster_id:1, game_id:49, title:"how is this game?", content: "wow this game is bad")
+Post.create(poster_id:1, game_id:49, title:"i am excited for this to come out", content: "i will play it")
 
 Comment.create(user_id: 1, post_id: 1, content:"so rude")
 
