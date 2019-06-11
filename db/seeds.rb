@@ -81,9 +81,21 @@ tophundo.map { |game|
 OwnedGame.create(user_id:1, game_id: 50)
 
 Post.create(poster_id:1, game_id:49, title:"how is this game?", content: "wow this game is bad")
-Post.create(poster_id:1, game_id:49, title:"i am excited for this to come out", content: "i will play it")
+Post.create(poster_id:2, game_id:49, title:"i am excited for this to come out", content: "i will play it")
+Post.create(poster_id:6, game_id:49, title:"Lorem ipsum dolor sit amet", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
+Post.create(poster_id:5, game_id:2, title:"i am excited for this to come out", content: "i will play it")
+Post.create(poster_id:4, game_id:1, title:"i am excited for this to come out", content: "i will play it")
+Post.create(poster_id:3, game_id:49, title:"i am excited for this to come out", content: "i will play it")
+Post.create(poster_id:2, game_id:49, title:"i am excited for this to come out", content: "i will play it")
+
 
 Comment.create(user_id: 1, post_id: 1, content:"so rude")
+Comment.create(user_id: 2, post_id: 2, content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+Comment.create(user_id: 3, post_id: 2, content:"Thats cool but you still suck")
+Comment.create(user_id: 4, post_id: 3, content:"What do you mean 'you people'?")
+Comment.create(user_id: 5, post_id: 3, content:"so rude")
+Comment.create(user_id: 2, post_id: 2, content:"so rude")
+
 
 
 

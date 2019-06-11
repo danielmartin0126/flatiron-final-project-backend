@@ -10,4 +10,10 @@ class Api::V1::FollowedGamesController < ApplicationController
         render json: @followers
     end
 
+    def create
+        @follower = FollowedGame.find_or_create_by(user_id: params[:user_id], game_id: params[:game_id], app_id: params[:app_id])
+        render json: @follower
+
+    end
+
 end

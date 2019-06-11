@@ -4,4 +4,5 @@ class Api::V1::CommentsController < ApplicationController
         @comments = Comment.all 
         render json: @comments
     end
+    
 end
