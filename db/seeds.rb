@@ -35,48 +35,7 @@ tophundo.map { |game|
     stuff = JSON.parse(game_data)
     Game.create(app_id: game, name: stuff[game]["data"]["name"], desc:stuff[game]["data"]["short_description"])}
 
-    FollowedGame.create(user_id: 1, game_id: 4, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 6, game_id: 2, app_id:10)
-
-    FollowedGame.create(user_id: 7, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 8, game_id: 2, app_id:10)
-
-    FollowedGame.create(user_id: 5, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 2, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 3, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 4, game_id: 2, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 5, app_id:10)
-
-    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
-    FollowedGame.create(user_id: 1, game_id: 7, app_id:10)
-    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
-    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
-    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
-    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
-    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
-
-
-    FollowedGame.create(user_id: 2, game_id: 4, app_id:10)
+  
 
 OwnedGame.create(user_id:1, game_id: 50)
 
