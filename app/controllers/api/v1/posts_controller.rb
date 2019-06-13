@@ -10,4 +10,9 @@ class Api::V1::PostsController < ApplicationController
         render json: @post
     end
 
+    def create
+        @post = Post.create(poster_id:params[:poster_id][:id], game_id: params[:game_id], title: params[:title], content: params[:content])
+        render json: @post
+    end 
+
 end
