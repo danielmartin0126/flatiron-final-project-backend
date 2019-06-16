@@ -3,6 +3,12 @@ class Api::V1::FriendsController < ApplicationController
         @friends = Friend.all
         render json: @friends
       end
+
+      def create
+        @friend = Friend.create(user_id: params[:user_id], friend_id: params[:friend_id])
+        @inverseFriend = Friend.create(user_id: params[:friend_id], friend_id: params[:user_id])
+        render json: @friend
+      end 
      
       def update
         @friend.update(friend_params)
