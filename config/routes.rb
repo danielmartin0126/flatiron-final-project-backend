@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       get '/total_followers/:id', to: 'followed_games#total_followers'
       post '/auth', to: 'auth#create'
       get '/current_user', to: 'auth#show'
+      get '/api_games', to:'games#api'
+      post '/save/:id', to: 'games#create'
 
 
     end
