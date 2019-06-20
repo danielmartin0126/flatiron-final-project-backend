@@ -30,7 +30,6 @@ require 'pry'
 # Friend.create(user_id: 6, friend_id: 1)
 # Friend.create(user_id: 6, friend_id: 3)
 
-  
 
 # OwnedGame.create(user_id:1, game_id: 50)
 
