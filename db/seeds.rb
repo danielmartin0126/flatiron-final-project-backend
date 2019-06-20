@@ -1051,13 +1051,22 @@ games = [730,
     385270,
     73010]
 
-games.map { |game|
-    if Game.find_by(app_id: game)
-        game_data = RestClient.get("https://store.steampowered.com/api/appdetails?appids=#{game}")
-        stuff = JSON.parse(game_data)
-        id = game.to_s
-        if (stuff[id]["success"] == true && stuff[id]["data"]["type"] === "game")
-            Game.find_or_create_by(app_id: game, name: stuff[id]["data"]["name"], desc:stuff[id]["data"]["short_description"])
-        end
-    end 
-}
+counter = 0
+# games.map { |game|
+#     if !Game.find_by(app_id: game)
+#         game_data = RestClient.get("https://store.steampowered.com/api/appdetails?appids=#{game}")
+#         stuff = JSON.parse(game_data)
+        
+#         id = game.to_s
+#         if stuff[id]["success"] == true
+#             counter++
+#             if counter % 100 == 0 
+#                 puts 'im still working on this stuff why is it so hard'
+#                 sleep 10
+#             end
+#             if (stuff[id]["data"]["type"] === "game")
+#                 Game.find_or_create_by(app_id: game, name: stuff[id]["data"]["name"], desc:stuff[id]["data"]["short_description"])
+#             end
+#         end
+#     end 
+# }
